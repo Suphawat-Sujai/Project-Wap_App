@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="createJavaScript.js" />
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="createJavaScript.js" defer></script>
+    <title>Project Web 1/3</title>
+  </head>
+
+  <body>
+    <div class="mb-4">
+      <nav class="justify-content-between navbar navbar-expand navbar-light">
+        <span class="navbar-brand">GraphQL Tutorial App</span>
+        <div class="justify-content-end navbar-collapse">
+          <button
+            id="qsLogoutBtn"
+            type="button"
+            class="btn-margin btn btn-primary"
+          >
+            Log Out
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="row col-md-9">
+          <div class="col-lg-6 p-30">
+            <div class="todoWrapper">
+              <div class="textHeader">
+                <b>Personal todos</b>
+              </div>
+              <form class="formInput">
+                <input class="input" placeholder="What needs to be done?" />
+              </form>
+              <br />
+              <div class="footerList">
+                <span id="itemCount" class="mr-3">0 items</span>
+                <button class="mr-2 selecttext" onclick="All()">All</button>
+                <button class="mr-2 selecttext" onclick="Active()">
+                  Active
+                </button>
+                <button class="mr-2 selecttext" onclick="Completed()">
+                  Completed
+                </button>
+                <button class="clearComp" onclick="clearCompleted()">
+                  Clear completed
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 bg-gray p-30">
+            <div class="textHeader">
+              <b>Public feed (realtime)</b>
+            </div>
+            <div class="todoWrapper">
+              <form class="formInput" id="todoInput">
+                <input
+                  class="input"
+                  id="taskLabel"
+                  placeholder="What needs to be done?"
+                />
+              </form>
+              <div class="todoListWrapper sliderMenu">
+                <ul class="paddingylsetzero" id="todoList"></ul>
+                <div class="loadMoreSection" id="loadMore">Load more tasks</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 p-left-right-0 bg-gray">
+          <div class="col-md-12 sliderMenu p-30">
+            <div>
+              <div class="textHeader">
+                <b>Online users - 3 </b>
+              </div>
+              <div class="userInfo">
+                <div class="userImg mr-2"><i class="far fa-user"></i></div>
+                <div>suphawat_sujai</div>
+              </div>
+              <div class="userInfo">
+                <div class="userImg mr-2"><i class="far fa-user"></i></div>
+                <div>warathep187</div>
+              </div>
+              <div class="userInfo">
+                <div class="userImg mr-2"><i class="far fa-user"></i></div>
+                <div>weed.20011025</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
